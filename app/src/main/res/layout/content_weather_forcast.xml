@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/skyblue">
+<!--<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+    <!--&lt;!&ndash;xmlns:app="http://schemas.android.com/apk/res-auto"&ndash;&gt;-->
+    <!--&lt;!&ndash;xmlns:tools="http://schemas.android.com/tools"&ndash;&gt;-->
+    <!--android:id="@+id/content_weather_forcast"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+
+
+    <!--app:layout_behavior="@string/appbar_scrolling_view_behavior"-->
+    <!--tools:context="com.rathore.newsweathertraffic.WeatherForcast"-->
+    <!--tools:showIn="@layout/activity_weather_forcast">-->
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_marginRight="20dp">
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar" />
+    <LinearLayout
+        android:layout_width="match_parent"
+
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/ll2"
+        android:layout_marginTop="20dp"
+        android:weightSum="1"
+        android:focusable="true"
+        android:focusableInTouchMode="true">
+    <EditText
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:textSize="30sp"
+        android:textColorHint="@color/white"
+        android:textColor="@color/white"
+        android:background="@null"
+        android:backgroundTint="@android:color/transparent"
+        android:layout_marginStart="20dp"
+    android:hint="Enter city name"
+        android:inputType="textNoSuggestions"
+    android:id="@+id/cityName"
+        android:imeOptions="actionDone"
+        android:singleLine="true"
+
+        />
+        <!--<Button-->
+            <!--android:layout_width="150dp"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:id="@+id/done"-->
+            <!--android:text="done"-->
+            <!--android:onClick="done"-->
+            <!--android:layout_marginStart="10dp"-->
+            <!--android:layout_marginRight="50dp"-->
+            <!--android:textSize="30sp"/>-->
+    </LinearLayout>
+    <!--<LinearLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--&lt;!&ndash;android:layout_below="@+id/ll2"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_marginTop="80dp"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:orientation="vertical"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_marginRight="100dp">&ndash;&gt;-->
+
+
+    <!--<TextView-->
+        <!--android:layout_below="@+id/currentLocation"-->
+        <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:textSize="30sp"-->
+    <!--android:id="@+id/weatherinfo"-->
+    <!--android:layout_marginTop="100dp"/>-->
+    <!--<TextView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:textSize="30sp"-->
+        <!--android:layout_below="@id/weatherinfo"-->
+        <!--android:onClick="forecasting"-->
+        <!--android:text="Week Forecasting"-->
+        <!--android:id="@+id/forcating"-->
+        <!--android:layout_marginTop="100dp"/>-->
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycler_view"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+
+
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            />
+
+</LinearLayout>
+<ListView android:id="@+id/left_drawer"
+android:layout_width="240dp"
+android:layout_height="match_parent"
+android:layout_gravity="start"
+    android:layout_marginTop="80dp"
+android:choiceMode="singleChoice"
+android:divider="@android:color/transparent"
+android:dividerHeight="0dp"
+    android:background="@color/skyblue"
+    />
+    </android.support.v4.widget.DrawerLayout>
